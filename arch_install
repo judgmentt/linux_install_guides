@@ -86,7 +86,16 @@ See list of networks:
   - Additional packages if you want to
   - Timezone
   - Install
-      
+
+# ----- Customizing
+
+Install some lightweight GUI apps:
+
+- pacman -Syyu
+
+- pacman -S nano vim git gcc firefox vlc libreoffice-fresh wget curl neofetch base-devel htop tmux sudo zsh
+
+- exit && shutdown now
 
 
 
