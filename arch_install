@@ -97,7 +97,26 @@ Install some lightweight GUI apps:
 
 - exit && shutdown now
 
+- Boot up
 
+# ----- Login in
+
+Change Session to Hyprland
+
+# ----- Connecting To Wifi
+
+SUPER+Q = open terminal
+
+- sudo nmcli dev wifi connect <wifi-ssid> password "<password>"
+-ping -c 6 google.com
+
+# ----- Ricing
+
+SUPER+R = open app launcher
+
+- firefox
+- https://github.com/mylinuxforwork/dotfiles
+- follow the prompt
 
 
 
