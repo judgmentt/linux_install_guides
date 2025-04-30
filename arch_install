@@ -1,0 +1,95 @@
+# ----- Quick guide to install arch linux with a rice -----
+
+
+# ----- Bigger Font
+
+- setfont ter-132n
+
+# ----- Check Wi-Fi Connection (SKIP IF ETHERNET)
+
+My laptop has built-in wifi. I will use iwctl. Then it will penters us to the IWD terminal:
+
+- iwctl
+
+# ----- IWD Terminal
+
+See list of networks:
+
+- device list
+
+# ----- WLAN0 Info -----
+
+- device wlan0 show
+
+# ----- See List Of Wi-Fi Networks
+
+- station wlan0 get-networks
+
+# ----- Connect To Wi-Fi
+
+- station wlan0 connect <name of wifi> 
+- password
+-exit
+- ping -c 4 google.com
+
+# ----- Synchronize System Packages and Upgrade Them To Latest Version
+
+- pacman -Sy
+
+# ----- Format Disk & Prepare For Install
+
+- lsbk:
+  - View a list of connected drives
+  - Confirm correct drive to use
+  - Enter gdisk
+    - gdisk /dev/<drive>
+      - Enter x to enter expert mode
+      - Enter z to erase the drive
+      - Follow prompt, erase drive
+
+# ----- Verify The Authenticity & Integrity Of Arch Linux Packages. Ensures They Come From Trusted Sources
+
+- pacman -Sy archlinux-keyring
+
+# ----- Set Up Arch Linux Install Script
+
+- pacman -Sy archinstall
+
+# ----- Launch Installer
+
+- archinstall
+  - Language
+  - Disk Configuration
+    - Partitioning
+      - Best-effort
+      - Select drive
+        - Filesystem
+          - btrfs
+            - Compression
+  - Encrypt if you want to
+  - Bootloader
+    - Grub
+  - Hostname
+  - Root Password
+  - User Account
+  - Profile
+    - Type
+      - Desktop
+      - Hyprland
+      - polkit
+    - Graphics driver
+      - Nvidia (proprietary)
+  - Audio
+    - pipewire
+  - Network configuration
+    - NetworkManager
+  - Additional packages if you want to
+  - Timezone
+  - Install
+      
+
+
+
+
+
+
